@@ -17,12 +17,9 @@ import {initFirebaseReporter} from "@/common/reporter/firebaseReporter";
 Vue.config.productionTip = false;
 // Vue.config.devtools = true
 
-// 根据lang获取title多语言
 async function initTitleLang(cookieLang?: string) {
   let title = "";
-  if (String(cookieLang) === COOKIE_LANG.zhCN) {
-    title = "商家管理后台";
-  }
+ 
   if (String(cookieLang) === COOKIE_LANG.enUS) {
     title = "Seller Management Backend";
   }
@@ -32,7 +29,6 @@ async function initTitleLang(cookieLang?: string) {
   document.title = title;
 }
 
-// 初始化固化全局配置
 async function initGlobalConfig() {
   try {
     const configUrl =
@@ -54,7 +50,6 @@ async function initGlobalConfig() {
   }
 }
 
-// 初始化全局CSS样式
 async function initThemeVar() {
   try {
     const cssVars = await axios.get("/config-b.css");
@@ -65,35 +60,21 @@ async function initThemeVar() {
   }
 }
 
-// 初始化多语言（主工程多语言、RCD多语言、UI组件多语言）
 async function initLang() {
-  // 根据cookie中的语言设置当前i18n语言环境,默认中文
   const currentLang = cookieUtil.getCookie(LANG_COOKIE_KEY) || Vue.prototype.$globalConfig?.defaultLang || DEFAULT_LANG;
-  // 设置全局的币种
   cookieUtil.setCookie(COOKIE_KEYS.CURRENCY_OBJ, Vue.prototype.$globalConfig.currencyType, Vue.prototype.$globalConfig.outerSecondaryDomain || '')
-  // 全局语言
   Vue.prototype.currentLang = currentLang;
-  // 初始化主工程页签title多语言
   await initTitleLang(currentLang);
-  // 初始化布局
   initHtmlLayout(currentLang);
-  // 初始化主工程i18n
   Vue.use(lang, currentLang);
-  // 初始化RCD多语言
   Vue.use(initRcd, currentLang);
-  // 初始化UI组件多语言
   Vue.use(initUI, currentLang);
 }
 
-// 初始化
 async function initConfig() {
-  // 1、初始化全局配置，并注册到Vue.prototype.$globalConfig
   await initGlobalConfig();
-  // 2、初始化多语言配置（包括：初始化布局、主工程多语言、RCD组件库多语言、UI组件多语言）
   await initLang();
-  // 3、初始化设计变量 (包括: 全局设计变量)
   await initThemeVar();
-  // 4、初始化firebase
   initFirebaseReporter()
 }
 

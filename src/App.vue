@@ -19,13 +19,10 @@
             <el-dropdown-item :command="COOKIE_LANG.arSA">
               <div :class="{active: isLangActive(COOKIE_LANG.arSA)}">{{ $t('main.arSA') }}</div>
             </el-dropdown-item>
-            <!-- <el-dropdown-item :command="COOKIE_LANG.zhCN">
-              <div :class="{active: isLangActive(COOKIE_LANG.zhCN)}">{{ $t('main.zhCN') }}</div>
-            </el-dropdown-item> -->
+          
           </el-dropdown-menu>
         </el-dropdown>
       </div>
-<!--      屏蔽-->
 <!--      <span class="msg-container" @click="toService">-->
 <!--        <i class="ext-icon-notification"></i>-->
 <!--        <span class="total" v-if="unreadCount !== '0'" :class="unreadClass">{{-->
@@ -58,9 +55,9 @@ import {VenderBaseInfoVo} from "@zode/b2c-be-shop-sdk-i18n/lib/vos/base/VenderBa
 import {SELLER_TYPE, SHOP_STATUS} from "@/constants/busi/BusiConstants";
 
 export interface VenderInfo extends VenderBaseInfoVo {
-  isSelfSale: boolean; // 是否自营商家
-  isPop: boolean; // 是否POP商家
-  isShopClosed: boolean; // 是否已关店
+  isSelfSale: boolean; 
+  isPop: boolean; 
+  isShopClosed: boolean; 
 }
 
 @Component({
@@ -96,10 +93,8 @@ export default class Index extends Vue {
   private menuHooks: Hooks = {
     afterGettingMenu: this.afterGettingMenu
   }
-  // 读取路由后，再渲染菜单
   menuFlag = false;
 
-  // 语言缩写
   get languageShortName () {
     if (this.cookieLang === COOKIE_LANG.arSA) {
       return (this as any).$t('main.arSAShort');
@@ -108,10 +103,8 @@ export default class Index extends Vue {
   }
 
   created() {
-    // 获取cookie
     this.cookieLang = cookieUtil.getCookie(LANG_COOKIE_KEY) || Vue.prototype.$globalConfig?.defaultLang || DEFAULT_LANG;
     cookieUtil.setCookie(LANG_COOKIE_KEY, this.cookieLang, Vue.prototype.$globalConfig.outerSecondaryDomain || '');
-    // 加延时，避免meta.hideFrame还没读到，就渲染菜单调接口（解决帮助中心不调菜单接口）
     setTimeout(() => {
       this.menuFlag = true;
     }, 300);
@@ -122,9 +115,7 @@ export default class Index extends Vue {
     this.timer = null;
   }
 
-  // 获取菜单后回调
   async afterGettingMenu() {
-    // 获取商家基本信息，并写入全局$globalConfig
     await this.getVenderBaseInfo();
     this.getMessageCenterMsg();
     this.getMessage();
@@ -132,7 +123,6 @@ export default class Index extends Vue {
       clearInterval(this.timer);
       this.timer = null;
     }
-    // 启定时器，定时获取未读消息数量
     this.timer = setInterval(() => {
       setTimeout(()=>{
         this.getMessageCenterMsg();
@@ -141,7 +131,6 @@ export default class Index extends Vue {
     }, 60 * 1000);
   }
 
-  // 语言变更
   handleSelectLanguage(lang: string) {
     if (this.isLangActive(lang)) {
       return;
@@ -153,12 +142,10 @@ export default class Index extends Vue {
     });
   }
 
-  // 语言高亮
   isLangActive(lang: string) {
     return lang === this.cookieLang;
   }
 
-  // 获取商家信息
   async getVenderBaseInfo() {
     try {
       const venderInfo = await this.ShopDomain.getVenderBaseInfo();
@@ -174,9 +161,7 @@ export default class Index extends Vue {
     }
   }
 
-  /**
-   * 消息中心未读消息数
-   */
+ 
   async getMessageCenterMsg() {
     let num = 0;
     num = await this.MessageCenterDomain.getMsgEntrance();
@@ -220,23 +205,16 @@ export default class Index extends Vue {
     return require("@/assets/img/main-logo.png");
   }
 
-  // 获取下发到子应用的配置
   getConstantsToSubApp() {
     const origin = window.location.origin
       ? window.location.origin
       : window.location.protocol + "//" + window.location.hostname;
     const ext = {
-      // 登出方法
       logoutMethod: this.logout,
-      // 登录方法
       loginMethod: this.login,
-      // 无权限页面
       noAuthPage: origin + ROUTES.NO_AUTH_PAGE.path,
-      // 非商家账号页
       notVenderPage: origin + ROUTES.WAIT_SETTLE.path,
-      // 入驻中页面
       settleIngPage: origin + ROUTES.APPLY_SETTLE.path,
-      // 当前语言
       language: this.cookieLang
     };
     if (

@@ -8,14 +8,14 @@ const IMAGE_DOMAIN_CONFIG = [
 ];
 
 /**
- * 获取图片前缀
+ * 
  */
 function getUrlPrefix (): string {
   return IMAGE_DOMAIN_CONFIG[Math.floor(Math.random() * 4)];
 }
 
 /**
- * 是否是绝对 Url
+ *  Url
  * @param url
  */
 function isAbsoluteURL(url: string): boolean {
@@ -24,7 +24,7 @@ function isAbsoluteURL(url: string): boolean {
 }
 
 /**
- * 是否是 gif 图片
+ *  gif 
  * @param url
  */
 function isGif(url: string): boolean {
@@ -32,7 +32,7 @@ function isGif(url: string): boolean {
 }
 
 /**
- * 是否是 jpg 图片
+ * jpg 
  * @param url
  */
 function isJpg(url: string): boolean {
@@ -40,11 +40,11 @@ function isJpg(url: string): boolean {
 }
 
 /**
- * 获取图片 cdn 地址
- * @param imgUrl 原图片地址
- * @param w 宽
- * @param h 高
- * @param covertDpg，是否转换图片dpg
+ *  cdn 
+ * @param imgUrl 
+ * @param w 
+ * @param h 
+ * @param covertDpg，dpg
  * @returns {*}
  */
 function getImgUrl (imgUrl = "", w?: number, h?: number, covertDpg?: boolean): string {

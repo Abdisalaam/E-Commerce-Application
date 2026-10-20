@@ -26,7 +26,7 @@ const getGlobalConfig = () => {
   }
 };
 
-/* 开发环境 */
+
 const MOCK_CONFIG = {
   GATEWAY_MAIN_URL: "http://Abdisalaam.Abdisalaam.sa",
   GATEWAY_PRODUCT_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/620cc514d6968554059b5303/ware",
@@ -47,7 +47,7 @@ const MOCK_CONFIG = {
   GATEWAY_INVOICE_MANAGE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/6371e6169ec2da4592d3de08/jh-invoice",
   GATEWAY_SETTLEMENT_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/64780875485a1585babd988e/settlementinfo",
   GATEWAY_INVITE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/62344449ac5d2430b9ba898e/invite",
-  // 提报主战测试地址，
+
   GATEWAY_SUBMIT_URL: "http://Abdisalaam-tbcommon.Abdisalaam.sa",
   GATEWAY_STORE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/62c4064a51ae73ef68433b3a/store",
   GATEWAY_APP_CODE: "testApp1123",
@@ -77,7 +77,7 @@ const MOCK_CONFIG = {
   GATEWAY_COMMENT_URL:""
 };
 
-/* test环境 */
+
 const TEST_CONFIG = {
   GATEWAY_MAIN_URL: "http://Abdisalaam.Abdisalaam.sa",
   GATEWAY_PRODUCT_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/620cc514d6968554059b5303/ware",
@@ -98,7 +98,7 @@ const TEST_CONFIG = {
   GATEWAY_INVOICE_MANAGE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/6371e6169ec2da4592d3de08/jh-invoice",
   GATEWAY_SETTLEMENT_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/64780875485a1585babd988e/settlementinfo",
   GATEWAY_INVITE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/62344449ac5d2430b9ba898e/invite",
-  // 提报主战测试地址，配host：111111 bq-tb.Abdisalaam.sa
+ 
   GATEWAY_SUBMIT_URL: "http://Abdisalaam-tbcommon.Abdisalaam.sa",
   GATEWAY_STORE_URL: "http://Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa/mock/62c4064a51ae73ef68433b3a/store",
   GATEWAY_APP_CODE: "123",
@@ -127,9 +127,9 @@ const TEST_CONFIG = {
   SETTLE_PROTOCAL_TEXT: "",
   GATEWAY_COUPON_CODE_URL: "",
   GATEWAY_COMMENT_URL:"",
-  GLOBAL_TIME_ZONE:3, //代表东三区
+  GLOBAL_TIME_ZONE:3, 
 };
-// 预发
+
 const PRE_CONFIG = {
   GATEWAY_MAIN_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_PRODUCT_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
@@ -184,9 +184,9 @@ const PRE_CONFIG = {
   GATEWAY_MESSAGE_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_COUPON_CODE_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_COMMENT_URL:"//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
-  GLOBAL_TIME_ZONE:3, //代表东三区
+  GLOBAL_TIME_ZONE:3, 
 };
-// 线上
+
 const PRODUCT_CONFIG = {
   GATEWAY_MAIN_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_PRODUCT_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
@@ -240,10 +240,10 @@ const PRODUCT_CONFIG = {
   GATEWAY_MESSAGE_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_COUPON_CODE_URL: "//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
   GATEWAY_COMMENT_URL:"//Abdisalaam-Abdisalaam-Abdisalaam.Abdisalaam-test.sa",
-  GLOBAL_TIME_ZONE:3, //代表东三区
+  GLOBAL_TIME_ZONE:3, 
 };
 
-// 通过全局配置替换
+
 const replaceByGlobalConfig = () => {
   const globalConfig = getGlobalConfig() || {};
   return {
@@ -310,7 +310,7 @@ export interface EnvConfig {
   [key: string]: any;
 };
 
-// 获取环境变量
+
 const getEnvConfig = (): EnvConfig => {
   let CONFIG;
   if (process.env.VUE_APP_MODE === DEV_ENV_FLAG) {

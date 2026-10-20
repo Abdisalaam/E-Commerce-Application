@@ -4,272 +4,258 @@ import VueRouter, { RouteConfig } from "vue-router"
 Vue.use(VueRouter)
 
 export const ROUTES = {
-  // 首页
+
   HOME: {
     path: "/home",
     name: "home"
   },
-  // 图片空间
+  
   IMG_ZONE: {
     path: "/media/imageZone",
     name: "imageZone"
   },
-  // 视频空间
+
   VIDEO_ZONE: {
     path: "/media/videoZone",
     name: "videoZone"
   },
-  // 图片回收站
+
   IMG_RECYCLE_BIN: {
     path: "/media/imgRecycleBin",
     name: "imgRecycleBin"
   },
-  // 任务中心
+ 
   TASK_CENTER: {
     path: "/taskCenter",
     name: "taskCenter"
   },
-  // 在售商品列表
+ 
   ON_SHELF_WARE: {
     path: "/onShelfWare",
     name: "onShelfWare"
   },
-  // 在售商品-新增
+ 
   ON_SHELF_WARE_ADD: {
     path: "/onShelfWareAdd",
     name: "onShelfWareAdd"
   },
-  // 在售商品-编辑
+  
   ON_SHELF_WARE_EDIT: {
     path: "/onShelfWareEdit",
     name: "onShelfWareEdit"
   },
-  // 待售商品列表
+
   OFF_SHELF_WARE: {
     path: "/offShelfWare",
     name: "offShelfWare"
   },
-  // 待售商品-新增
+  
   OFF_SHELF_WARE_ADD: {
     path: "/offShelfWareAdd",
     name: "offShelfWareAdd"
   },
-  // 待售商品-编辑
+
   OFF_SHELF_WARE_EDIT: {
     path: "/offShelfWareEdit",
     name: "offShelfWareEdit"
   },
-  // 商品草稿页
+
   PRODUCT_DRAFT_PAGE: {
     path: "/productDraft",
     name: "productDraft"
   },
-  // 商品草稿页-编辑
+
   PRODUCT_DRAFT_EDIT: {
     path: "/productDraftEdit",
     name: "productDraftEdit"
   },
-  // 商品草稿页-复制
+
   PRODUCT_DRAFT_COPY: {
     path: "/productDraftCopy",
     name: "productDraftCopy"
   },
-  // 商品回收站
+
   RECYCLE_WARE: {
     path: "/recycleWare",
     name: "recycleWare"
   },
-  // SKU查询页
+
   SKU_QUERY_PAGE: {
     path: "/skuQuery",
     name: "skuQuery"
   },
-  // 属性管理
+
   ATTR_WARE: {
     path: "/attrWare",
     name: "attrWare"
   },
-  // 商品后门管理
+
   PRODUCT_BACK_DOOR: {
     path: "/productBackdoor",
     name: "productBackdoor"
   },
-  // 库存管理
+
   STOCK_MANAGE: {
     path: "/stockManage",
     name: "stockManage"
   },
-  // 店铺-商家信息-商家基本信息
+ 
   VENDER_INFO: {
     path: "/venderInfo",
     name: "venderInfo"
   },
-  // 店铺-商家信息-联系人信息
+
   CONTACT_INFO: {
     path: "/contactInfo",
     name: "contactInfo"
   },
-  // 店铺-商家信息-品牌列表
+
   BRAND_LIST: {
     path: "/brandList",
     name: "brandList"
   },
-  // 店铺-店铺管理-品牌资质
+ 
   BRAND_CERTIFICATION: {
     path: '/brandCertification',
     name: "brandCertification"
   },
-  // 店铺-店铺管理-店铺信息
+
   SHOP_INFO: {
     path: "/shopInfo",
     name: "shopInfo"
   },
-  // 店铺-店铺管理-店内分类
+
   SHOP_CATEGORY: {
     path: "/shopCategory",
     name: "shopCategory"
   },
-  // 商家扣点
+
   SHOP_COMMISSION: {
     path: "/sellerCommissionManage",
     name: "sellerCommissionManage"
   },
-  // 店铺-店铺管理-商家地址管理
+ 
   SHOP_VENDER_ADDRESS: {
     path: "/venderAddress",
     name: "venderAddress"
   },
-  // 店铺-产品线列表
+
   SHOP_CATEGORY_BRAND_LIST: {
     path: "/categoryBrandList",
     name: "categoryBrandList"
   },
-  // 中间页：商家入驻-待入驻（非商家账号）
+
   WAIT_SETTLE: {
     path: '/waitSettle',
     name: "waitSettle"
   },
-  // 中间页：运营代中
+
   ZY_SETTLE_IN_ING: {
     path: '/zySettleIng',
     name: "zySettleIng"
   },
-  // 中间页：供应商入驻中
+
   SUPPLIER_SETTLE_IN_ING: {
     path: '/supplierSettleIng',
     name: "supplierSettleIng"
   },
-  // 中间页：已入驻为供应商
+
   HAS_BEEN_A_SUPPLIER: {
     path: '/hasBeenASupplier',
     name: "hasBeenASupplier"
   },
-  // 商家入驻-入驻中
+  
   APPLY_SETTLE: {
       path: '/applySettle',
     name: "applySettle"
   },
-  // 店铺续签
+
   SHOP_RENEWAL: {
     path: '/shopRenew',
     name: "shopRenew"
   },
-  // 无权限页面
+ 
   NO_AUTH_PAGE: {
     path: '/noAuth',
     name: "noAuth"
   },
-  // 仓库管理页面
+
   WAREHOUSE_MANAGE_PAGE: {
     path: '/warehouseManage',
     name: "warehouseManage"
   },
-  // 仓库覆盖范围
+
   WAREHOUSE_COVERAGE_PAGE: {
     path: '/warehouseCoverage',
     name: "warehouseCoverage"
   },
-  // 仓库流水管理
+
   STOCK_STREAM_LIST_PAGE: {
     path: '/stockStreamList',
     name: "stockStreamList"
   },
-  // 营销-首页
+
   MARKETING_HOME: {
     path: '/marketing',
     name: "marketing"
   },
-  // 营销-优惠券管理
+
   COUPON_MANAGE: {
     path: '/couponList',
     name: "couponList"
   },
-  // 营销-优惠券管理-新增商品券
   PRODUCT_COUPON_ADD: {
     path: '/productCouponAdd',
     name: "productCouponAdd"
   },
-  // 营销-优惠券管理-查看商品券
   PRODUCT_COUPON_DETAIL: {
     path: '/productCouponDetail',
     name: "productCouponDetail"
   },
-  // 营销-优惠券管理-新增店铺券
   SHOP_COUPON_ADD: {
     path: '/shopCouponAdd',
     name: "shopCouponAdd"
   },
-  // 营销-优惠券管理-查看店铺券
   SHOP_COUPON_DETAIL: {
     path: '/shopCouponDetail',
     name: "shopCouponDetail"
   },
-  // 营销-促销活动-单品促销
   PROMO_SINGLE_LIST: {
     path: '/singlePromo',
     name: "singlePromo"
   },
-  // 营销-促销活动-新增单品促销
   PROMO_SINGLE_ADD: {
     path: '/addSinglePromo',
     name: "singlePromoAdd"
   },
-  // 营销-促销活动-单品促销详情
   PROMO_SINGLE_DETAIL: {
     path: '/viewSinglePromo',
     name: "viewSinglePromo"
   },
-  // 营销-促销活动-满元包邮促销
   PROMO_FREE_DELIVERY_LIST: {
     path: '/freeDeliveryPromo',
     name: "freeDeliveryPromo"
   },
-  // 营销-促销活动-新增满元包邮促销
   PROMO_FREE_DELIVERY_ADD: {
     path: '/addFreeDeliveryPromo',
     name: "addFreeDeliveryPromo"
   },
-  // 营销-促销活动-查看满元包邮促销
   PROMO_FREE_DELIVERY_DETAIL: {
     path: '/viewFreeDeliveryPromo',
     name: "viewFreeDeliveryPromo"
   },
-  // 运费
   SHIPPING: {
     path: '/shippingManage',
     name: "shippingManage"
   },
-  // 运费模版池
   SHIPPING_TEMPLATE: {
     path: '/shippingTemplateManage',
     name: "shippingTemplateManage"
   },
-  // 角色管理
   ROLE_MANAGE: {
     path: '/roleManage',
     name: "roleManage"
   },
-  // 账号操作日志
   ACCOUNT_LOG_MANAGE: {
     path: '/accountLogManage',
     name: "accountLogManage"
@@ -286,7 +272,6 @@ export const ROUTES = {
     path: '/bindRole',
     name: "bindRole"
   },
-  // 员工管理
   USER_MANAGE: {
     path: '/userManage',
     name: "userManage"
@@ -299,113 +284,68 @@ export const ROUTES = {
     path: '/editUser',
     name: "editUser"
   },
-  // 供品方
   GONG_PIN_LIST: {
     path: '/gongPin',
     name: "gongPin"
   },
-  // 订单-订单列表
   ORDER_LIST: {
     path: '/orderList',
     name: "orderList"
   },
-  // 订单-订单详情
   ORDER_DETAIL: {
     path: '/orderDetail/:orderId',
     name: "orderDetail"
   },
-  // JDI订单-订单详情
   JDI_ORDER_DETAIL: {
     path: "/jdiOrderDetail",
     name: "jdiOrderDetail"
   },
-  // 售后-售后列表
   AFS_LIST: {
     path: '/afs/afsList',
     name: "afsList"
   },
-  // 售后-售后详情
   AFS_DETAIL: {
     path: '/afs/afsDetail',
     name: "afsDetail"
   },
-  // 售后-取消单列表
   CANCEL_ORDER_LIST: {
     path: '/afs/cancelOrderList',
     name: "afsList"
   },
-  // 售后-取消单详情
   CANCEL_ORDER_DETAIL: {
     path: '/afs/cancelOrderDetail',
     name: "afsDetail"
   },
-  // 商家帮助中心（主页：/help/home）
   HELP_SHOP: {
     path: '/help/:pageType',
     name: 'help'
   },
-  // 发票管理
   INVOICE_MANAGE: {
     path: '/invoiceAudit',
     name: 'invoiceAudit'
   },
-  // 发票详情
   INVOICE_DETAIL: {
     path: '/invoiceDetail',
     name: 'invoiceDetail'
   },
-  // // 结算-对账&资金账户管理
-  // // 质保金明细
   SETTLEMENT_WARRANTY_DETAILS: {
     path: "/settlement/warrantyDetails",
     name: "warrantyDetails"
   },
-  // // 对账明细
-  // SETTLEMENT_RECONCILIATION_MANAGE: {
-  //   path: "/settlement/reconciliationDetailsList",
-  //   name: "reconciliationDetailsList"
-  // },
-  // 资金账户
-  // SETTLEMENT_ACCOUNT_MANAGE: {
-  //   path: "/settlement/accountManegeList",
-  //   name: "accountManegeList"
-  // },
-  // // 收支明细
-  // SETTLEMENT_INC_EXP: {
-  //   path: "/settlement/incomeExpenditureDetailsList",
-  //   name: "incomeExpenditureDetailsList"
-  // },
-  // // 充值记录
-  // SETTLEMENT_RECHARGE: {
-  //   path: "/settlement/rechargeRecordList",
-  //   name: "rechargeRecordList"
-  // },
-  // // 提现记录
-  // SETTLEMENT_WITHDRAWAL: {
-  //   path: "/settlement/withdrawalRecordList",
-  //   name: "withdrawalRecordList"
-  // },
-  // 结算-收付费管理
+  
   B_COLLECT_PAY_LIST: {
     path: "/settlement/bCollectPayList",
     name: "bCollectPayList"
   },
-  // 结算-收付费管理详情
   B_COLLECT_PAY_DETAIL: {
     path: "/settlement/bCollectPayDetail",
     name: "bCollectPayDetail"
   },
-  // // 对账文件
-  // SETTLEMENT_RECONCILIATION: {
-  //   path: "/settlement/reconciliationFile",
-  //   name: "reconciliationFile"
-  // },
-  // 店铺-商家信息-积分比例设置
+  
   SHOP_INTEGRALPROPORTION: {
     path: "/integralProportionList",
     name: "integralProportionList"
   },
-  // 秒杀活动报名
   TB_SUBMIT_MANAGE: {
     path: '/tb/submitManage',
     name: 'submitManage'
@@ -414,7 +354,6 @@ export const ROUTES = {
     path: '/tb/submitDetail',
     name: 'submitDetail'
   },
-  // 邀请有礼
   INVITE_MANAGE: {
     path: '/invite/list',
     name: 'inviteList'
@@ -431,7 +370,6 @@ export const ROUTES = {
     path: '/invite/activity',
     name: 'inviteActivity'
   },
-  // vop卡单
   VOP_MANAGE: {
     path: '/vop/list',
     name: 'vopList'
@@ -452,7 +390,6 @@ export const ROUTES = {
     path: '/vop/profitSetting',
     name: 'profitSetting'
   },
-  // 门店
   STORE_MANAGE: {
     path: '/storeManage',
     name: 'storeManage'
@@ -493,12 +430,10 @@ export const ROUTES = {
     path: '/consumeOrderDetail/:orderId',
     name: 'consumeOrderDetail'
   },
-  // 预售-订单
   PRE_SALE_ORDER: {
     path: '/presaleOrderList',
     name: 'presaleOrderList'
   },
-  // 大转盘
   TURNABLE_LIST: {
     path: "/turnable/list",
     name: "turnableList"
@@ -515,112 +450,90 @@ export const ROUTES = {
     path: "/turnable/awardRecord",
     name: "awardRecord"
   },
-  // 客服插件
   SERIVCE_PLUGIN: {
     path: '/customerServicePlugin',
     name: 'customerServicePlugin'
   },
-  // 砍价
   BARGAIN_PAGE: {
     path: '/bargainPage',
     name: 'bargainPage'
   },
-  // 砍价-详情
   BARGAIN_DETAIL: {
     path: '/bargainDetail/:activityId',
     name: 'bargainDetail'
   },
-  // 砍价-新增
   BARGAIN_ADD: {
     path: '/bargainAdd/:activityMode',
     name: 'bargainAdd'
   },
-  // 砍价-编辑
   BARGAIN_EDIT: {
     path: '/bargainEdit/:activityId',
     name: 'bargainEdit'
   },
-  // 砍价-复制
   BARGAIN_COPY: {
     path: '/bargainCopy/:activityId',
     name: 'bargainCopy'
   },
-  // 砍价-任务页
   BARGAIN_TASK_PAGE: {
     path: '/bargainTaskPage/:activityId',
     name: 'bargainTaskPage'
   },
-  // 买赠
   ADD_BUY_GIFT_PAGE: {
     path: '/buyGift',
     name: 'buyGift'
   },
-  // 买赠-新增
   ADD_BUY_GIFT_ADD: {
     path: '/buyGift/create',
     name: 'createbuyGift'
   },
-  // 买赠-详情
   ADD_BUY_GIFT_DETAIL: {
     path: '/buyGift/detail',
     name: 'buyGiftDetail'
   },
-  // 预售
   PRESALE_PAGE: {
     path: '/presale',
     name: 'presale'
   },
-  // 预售-新增
   PRESALE_ADD: {
     path: '/presale/create',
     name: 'createPresale'
   },
-  // 预售-详情
   PRESALE_DETAIL: {
     path: '/presaleDetail/:presaleId',
     name: 'presaleDetail'
   },
-  // 拼团
   GROUP_PAGE: {
     path: '/groupListPage',
     name: 'groupListPage'
   },
-  // 拼团-新增
   GROUP_ADD: {
     path: '/group/create',
     name: 'groupCreate'
   },
-  // 拼团-详情
   GROUP_DETAIL: {
     path: '/group/detail',
     name: 'groupDetails'
   },
-  //优惠满减
   PROMOTION_LIST: {
     path: '/promotionList',
     name: "promotionList"
   },
-  //优惠满减详情
   PROMOTION_DETAIL: {
     path: '/promotionDetail',
     name: "promotionDetail"
   },
-  //优惠满减报名
   PROMOTION_ENTRY: {
     path: '/promotionEntry',
     name: "promotionEntry"
   },
-  // 平台满减
   FULL_REDUCTION_ENROLL: {
     path: '/fullReductionEnroll',
     name: 'fullReductionEnroll'
   },
-  // 平台满减详情
   FULL_REDUCTION_ENROLL_DETAIL: {
     path: '/fullReductionEnroll/detail',
     name: 'fullReductionEnrollDetail'
   },
-  // 平台满减报名
   FULL_REDUCTION_ENROLL_ENROLL: {
     path: '/fullReductionEnroll/enroll',
     name: 'fullReductionEnrollEnroll'
@@ -637,52 +550,42 @@ export const ROUTES = {
     path: '/messageCenter/messageSubscription',
     name: 'messageSubscription'
   },
-  // 优惠码管理
   COUPON_CODE_MANAGE: {
     path: '/couponCode/couponCodeManage',
     name: 'couponCodeManage'
   },
-  // 优惠码创建
   COUPON_CODE_ADD: {
     path: '/couponCode/couponCodeAdd',
     name: 'couponCodeAdd'
   },
-  // 优惠码详情
   COUPON_CODE_DETAIL: {
     path: '/couponCode/couponCodeDetail',
     name: 'couponCodeDetail'
   },
-  // 结算列表
   SETTLEMENT_LIST: {
     path: '/settlement/settlementList',
     name: 'settlementList'
   },
-  // 结算单
   SETTLEMENT_DETAIL: {
     path: '/settlement/settlementDetail',
     name: 'settlementDetail'
   },
-  // 结算详情
   SETTLEMENT_ITEM_DETAIL: {
     path: '/settlement/settlementItemDetail',
     name: 'settlementItemDetail'
   },
-  // 结算单查询
   SETTLEMENT_QUERY: {
     path: '/settlement/settlementQuery',
     name: 'settlementQuery',
   },
-  // 价格变更流水
   PRICE_CHANGE_FLOW_LIST: {
     path: "/price/priceChangeFlowList",
     name: 'priceChangeFlowList'
   },
-  // 评价列表
   COMMENT_LIST:{
     path: "/commentList",
     name: "commentList"
   },
-  // 评价详情
   COMMENT_DETAIL: {
     path: "/commentDetail",
     name: "commentDetail"
@@ -850,7 +753,6 @@ const routes: Array<RouteConfig> = [
     name: ROUTES.BRAND_CERTIFICATION.name,
     component: () => import(/* webpackChunkName: 'brandCertification' */ '../views/shop/BrandCertification.vue')
   },
-  // 商家入驻中，中间页
   {
     path: ROUTES.WAIT_SETTLE.path,
     name: ROUTES.WAIT_SETTLE.name,
@@ -859,7 +761,6 @@ const routes: Array<RouteConfig> = [
     },
     component: () => import(/* webpackChunkName: 'waitSettle' */ '../views/middlePage/WaitSettle.vue')
   },
-  // 商家入驻中，中间页
   {
     path: ROUTES.ZY_SETTLE_IN_ING.path,
     name: ROUTES.ZY_SETTLE_IN_ING.name,
@@ -868,7 +769,6 @@ const routes: Array<RouteConfig> = [
     },
     component: () => import(/* webpackChunkName: 'ZySettleIng' */ '../views/middlePage/ZySettleIng.vue')
   },
-  // 供应商入驻中，中间页
   {
     path: ROUTES.SUPPLIER_SETTLE_IN_ING.path,
     name: ROUTES.SUPPLIER_SETTLE_IN_ING.name,
@@ -877,7 +777,6 @@ const routes: Array<RouteConfig> = [
     },
     component: () => import(/* webpackChunkName: 'SupplierSettleIng' */ '../views/middlePage/SupplierSettleIng.vue')
   },
-  // 已成为供应商，中间页
   {
     path: ROUTES.HAS_BEEN_A_SUPPLIER.path,
     name: ROUTES.HAS_BEEN_A_SUPPLIER.name,

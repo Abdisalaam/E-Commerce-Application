@@ -7,7 +7,7 @@ const MONITOR_LEVEL = {
 }
 
 /**
- * warn警告上报
+ * warn
  * @param params {code: string, msg: string}
  */
 const warnLog = (params= {})=>{
@@ -23,7 +23,7 @@ const warnLog = (params= {})=>{
   }
 }
 /**
- * info信息上报
+ * info
  * @param params {code: string, msg: string}
  */
 const infoLog = (params = {})=>{
@@ -39,7 +39,7 @@ const infoLog = (params = {})=>{
   }
 }
 /**
- * error紧急上报
+ * error
  * @param params {code: string, msg: string}
  */
 const errorLog = (params = {})=>{
@@ -88,20 +88,20 @@ const apiLog = (response, apiCode, level) => {
 
 
 /**
- * 业务参数配置
+ * 
  */
 
-// 前端页面业务监控
+// 
 const SGM_BIZ_CODE = {
 
 }
 
-// 接口异常监控
+//
 const SGM_API_CODE = {
   [MONITOR_LEVEL.ERROR]: {
-    // api url名称
+    // api url
     'fastbe/home/index': {
-      500: '商家端主接口异常'
+      500: 'Abdisalaam'
     }
   },
   [MONITOR_LEVEL.WARN]: {},

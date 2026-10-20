@@ -9,21 +9,21 @@ const TIMEOUT = 1000 * 60;
 axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 const instance = axios.create({
-  // 默认开启凭证，带cookie到请求中
+
   withCredentials: true,
-  // 默认10秒超时
+
   timeout: TIMEOUT,
   headers: {
-    // 默认请求格式为JSON
+ 
     "Content-Type": "application/json",
-    // 默认请求不缓存
+
     "Cache-Control": "no-cache"
   }
 })
 
 let loading: any
 
-// 使用Element loading-start 方法
+// Element loading-start 
 function startLoading (loadingSelector?: string) {
   loading = Loading.service({
     lock: true,
@@ -31,7 +31,7 @@ function startLoading (loadingSelector?: string) {
     target: loadingSelector || CONSTANTS.LOADING_SELECTOR
   })
 }
-// 使用Element loading-close 方法
+
 function endLoading () {
   loading.close()
 }
@@ -54,7 +54,7 @@ export function tryHideFullScreenLoading () {
   }
 }
 
-// 请求拦截
+
 instance.interceptors.request.use(
   (config: any) => {
     if (config.showLoading) {
@@ -70,7 +70,7 @@ instance.interceptors.request.use(
   }
 )
 
-// 响应拦截
+
 instance.interceptors.response.use(
   resp => {
     // @ts-ignore

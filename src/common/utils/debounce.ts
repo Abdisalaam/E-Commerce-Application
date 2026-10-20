@@ -1,5 +1,5 @@
 /**
- *  防抖
+ *  
  * @param fn
  * @param wait
  * @returns {Function}

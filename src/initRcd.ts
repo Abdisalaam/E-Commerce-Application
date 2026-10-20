@@ -1,5 +1,4 @@
 import RCD from "@Abdisalaam/rcd";
-// 样式引入顺序，rcd基础组件样式
 import "@/assets/style/index.scss";
 import "@Abdisalaam/rcd/packages/theme-chalk/src/index.scss";
 import {COOKIE_LANG} from "@/constants/constants";
@@ -11,7 +10,6 @@ import rcdLangZhCN from "@Abdisalaam/rcd/lib/locale/lang/zh-CN";
 //@ts-ignore
 import rcdLangArAE from "@Abdisalaam/rcd/lib/locale/lang/ar";
 
-// 获取rcd多语言locale message~
 const getRcdLocale = (cookieLang?: string) => {
   switch (cookieLang) {
     case COOKIE_LANG.enUS:
@@ -29,7 +27,6 @@ const getRcdLocale = (cookieLang?: string) => {
 }
 
 const install = function (VueObj: any, cookieLang?: string) {
-  // RCD组件库多语言
   VueObj.use(RCD, {
     size: "small",
     locale: getRcdLocale(cookieLang)

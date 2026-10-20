@@ -17,9 +17,9 @@ npm run dev
 
 ### Compiles and minifies for production
 ```
-预发环境：
+
 npm run pre
-生产环境：
+
 npm run build
 ```
 
@@ -33,17 +33,17 @@ npm run test:unit
 npm run lint
 ```
 
-### 代码规范
+
 
 
 ### easy-cli
 > vue-cli4
 ```
 ├── README.md
-├── babel.config.js   // bebel配置
+├── babel.config.js  
 ├── bin
-│   └── start.sh  // 在线打包工程启动脚本
-├── dist   // 打包输出目录，按版本控制
+│   └── start.sh  
+├── dist  
 │   ├── 20200805
 │   │   ├── css
 │   │   ├── img
@@ -57,7 +57,7 @@ npm run lint
 │   │   ├── img
 │   │   └── js
 │   └── index.html
-├── mock // 数据mock配置
+├── mock
 │   ├── beta-color.jd.id
 │   │   ├── index.js
 │   │   └── json
@@ -68,54 +68,54 @@ npm run lint
 │       └── json
 ├── package-lock.json
 ├── package.json
-├── public // 落地页配合，落地页不同模块拆分到layoutConfig目录下
+├── public 
 │   ├── index.html
 │   └── layoutConfig
 │       ├── ja.html
 ├── src
-│   ├── App.vue // 入口页面
-│   ├── assets  // 静态资源目录
+│   ├── App.vue 
+│   ├── assets  
 │   │   ├── img
 │   │   └── style
-│   ├── common // 公共资源目录
+│   ├── common 
 │   │   └── utils
-│   ├── components  // 组件目录
+│   ├── components  
 │   │   └── floorRecommend
-│   ├── constants   // 常量配置
+│   ├── constants   
 │   │   └── eventsEnum.js
-│   ├── lang    // 多语言配置
+│   ├── lang    
 │   │   ├── en_US
 │   │   ├── in_ID
 │   │   └── index.js
-│   ├── lib    // 引用的外部官方js库
+│   ├── lib    
 │   │   └── index.js
-│   ├── main.js // 入口文件
-│   ├── router  //  路由配置
+│   ├── main.js 
+│   ├── router  
 │   │   └── index.js
-│   ├── rpc   //  rpc调用，直接调后端接口
+│   ├── rpc   
 │   │   └── index.js
-│   ├── service   //  对RPC返回数据的二次峰值，所有页面请求后台的数据都走service
+│   ├── service  service
 │   │   └── index.js
-│   ├── theme  // 主题配置
+│   ├── theme  
 │   │   └── index.js
-│   └── views   // 不同路由入口页面
+│   └── views   
 │       ├── Home.vue
 │       └── Product.vue
-├── test   // 单元测试配置目录
+├── test   
 │   ├── jest.conf.js
 │   ├── setup.js
 │   └── unit
 │       └── floors
-├── .eidtorconfig    // 编辑器缩进相关配置
-├── .env.development    // 开发环境-环境变量
-├── .env.pre    // 预发环境-环境变量
-├── .env.production    // 生产环境-环境变量
-├── .eslintrc.js   // eslint配置
-├── .gitignore   // git提交忽略的文件
-├── .stylelintignore   // 样式校验忽略的文件
-├── .stylelintrc.json  // 样式校验配置
-├── version.js    // 打包版本控制相关配置
-└── vue.config.js     // webpack相关配置
+├── .eidtorconfig    
+├── .env.development   
+├── .env.pre    
+├── .env.production    
+├── .eslintrc.js   
+├── .gitignore   
+├── .stylelintignore   
+├── .stylelintrc.json  
+├── version.js    
+└── vue.config.js   
 
 ```
 ##### 1、publish -- 
@@ -147,13 +147,10 @@ ${ require('html-loader!./layoutConfig/ja.html') }
 ```
 
 ##### 2、constants -- 
-> ，eventsEnum.js
+> eventsEnum.js
 ```javascript
-// 事件类型枚举
 export const EVENTS_ENUM = {
-  // 关闭顶部app bar
   ON_CLOSE_TOP_APP_BAR: 'ON_CLOSE_TOP_APP_BAR',
-  // 头部tab点击
   ON_CLICK_HEADER_TAB: 'ON_CLICK_HEADER_TAB'
 }
 

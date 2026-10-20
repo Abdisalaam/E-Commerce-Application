@@ -1,6 +1,6 @@
 {
   "productCode": "b2c",
-  "title": "B2C商家管理后台",
+  "title": "Abdisalaam",
   "gatewayUrl": "http://Abdisalaam-api-cloud.Abdisalaam.sa",
   "gatewayAppCode": "b2cseller",
   "imageDomain": ["//imgdownload.Abdisalaam.sa/da/"],
@@ -29,7 +29,7 @@
   "deductionDetails": "//jdprice-seller-shop.b2c221030.Abdisalaam.sa/arcfox/pariceselect?buId=405&type=arrivalUnitPrice&source=parity&",
   "payWay": "lianlian",
   "lianlianEnv": "production",
-  "settleProtocalText": "《B2C商城在线服务协议》",
+  "settleProtocalText": "Abdisalaam",
   "marketingHomeMenuCode": {},
   "orderOssBuket": "b2c01common-oss"
 }

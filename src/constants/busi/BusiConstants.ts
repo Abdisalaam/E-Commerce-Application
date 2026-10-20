@@ -1,6 +1,6 @@
 import {Vue} from "vue-property-decorator";
 
-// 商品状态改变动作~ 1-上架 2-下架 3-删除 4-删除恢复
+
 export const CHANGE_PRODUCT_STATUS_ACTION = {
   ON_SHELF: 1,
   OFF_SHELF: 2,
@@ -8,20 +8,20 @@ export const CHANGE_PRODUCT_STATUS_ACTION = {
   RECOVER: 4
 }
 
-// 商品上下架状态
+
 export const PRODUCT_STATUS = {
   ON_SHELF: 1,
   OFF_SHELF: 2
 }
 
-// 跳转到商详的方法
+
 export const toSkuDetail = (skuId: string) => {
   setTimeout(() => {
     window.open(`//www.${Vue.prototype.$globalConfig.outerSecondaryDomain}/product/${skuId}.html`, '_blank')
   })
 }
 
-// 订单列表-跳转到买家客服页
+
 export const toChatWithBuyer = (cAppId: string, userPin: string, venderId: string | number) => {
   setTimeout(() => {
     window.open(`${Vue.prototype.$globalConfig.serviceMainUrl}?cus=${encodeURIComponent(JSON.stringify({
@@ -32,7 +32,7 @@ export const toChatWithBuyer = (cAppId: string, userPin: string, venderId: strin
   })
 }
 
-// 内容区置顶
+
 export const mainScrollTop = () => {
   const mainScrollWrap = document.querySelector(".ka-rcd-menu-content-container-wrap");
   if (mainScrollWrap) {
@@ -40,14 +40,14 @@ export const mainScrollTop = () => {
   }
 }
 
-// 扣减详情入参
+
 export interface DeductionVo {
   promoType: string | number;
   skuId: string | number;
   promoId: string | number;
 }
 
-//扣减详情
+
 export const toDeductionDetails = (params: DeductionVo) => {
   const query = `promoType=${params.promoType}&skuId=${params.skuId}&promoId=${params.promoId}`
   setTimeout(() => {

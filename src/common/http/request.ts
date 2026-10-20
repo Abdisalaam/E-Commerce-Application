@@ -9,7 +9,7 @@ interface HttpRequest {
   headers?: object;
   showLoading?: boolean;
   method?: "POST" | "GET";
-  // 请求loading遮罩区域
+
   loadingSelector?: string;
 }
 
@@ -27,7 +27,7 @@ const request = (config: HttpRequest) => {
   }
   const configHeaders = config.headers || {};
   const defaultHeaders = axios.defaults.headers;
-  // 默认 showLoading 为 true
+
   config.showLoading = typeof config.showLoading === "undefined" ? true : config.showLoading;
   config.headers = Object.assign(
     defaultHeaders,

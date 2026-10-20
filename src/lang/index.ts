@@ -1,5 +1,4 @@
 import i18n from "@/lang/i18n";
-import zhCN from "@/lang/zh_CN/index";
 import enUS from "@/lang/en_US/index";
 import arSA from "@/lang/ar_SA/index";
 import {COOKIE_LANG, DEFAULT_LANG} from "@/constants/constants";
@@ -19,7 +18,7 @@ const init = function (localeParams?: string) {
     locale = localeParams;
   }
   i18n.init(locale, {
-    [COOKIE_LANG.zhCN]: zhCN,
+  
     [COOKIE_LANG.enUS]: enUS,
     [COOKIE_LANG.arSA]: arSA
   });

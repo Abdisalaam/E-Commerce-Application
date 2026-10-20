@@ -1,5 +1,5 @@
 /**
- * 节流
+ * 
  * @param method
  * @param delay
  * @param duration

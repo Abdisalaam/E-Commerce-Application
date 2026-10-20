@@ -1,7 +1,7 @@
 /**
- * 入参为换肤的css变量，格式为
+ * 
  * root: {
- *   变量a: 变量a的值
+ *   
  * }
  * @param rootCss
  */
@@ -21,7 +21,7 @@ export const initCssVars = (rootCss: string) => {
 
 
 /**
- * 动态添加linkIcon的方法
+ *linkIcon
  * @param url
  */
 export const initLinkIcon = (url: string) => {

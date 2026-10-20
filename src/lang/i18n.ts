@@ -1,10 +1,10 @@
 let targetLang: any;
-// 前端多语言前缀标识，不用于多语言解析，只用于出现异常时，跟后端key做区分
+
 const FRONT_ERR_LANG_PREFIX = "fe.";
 export default {
   /**
    *
-   * @param {string} lang 当前语言值
+   * @param {string} lang 
    * @param {object} messages
    * e.g.
    * message = {
@@ -27,8 +27,8 @@ export default {
   },
   /**
    *
-   * @param {string} path 带翻译文案的key path
-   * @param {object} params 若是带翻译文案中包含参数，可以通过params的方式传值
+   * @param {string} path 
+   * @param {object} params 
    */
   t(path: any, params?: any) {
     if (!targetLang || !path) {

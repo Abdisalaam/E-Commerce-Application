@@ -1,5 +1,5 @@
 :root {
-	/* 需要换肤的变量 更多变量替换参考： */
+
 	--rcd-color-brand-normal: #10BB9C;
 	--rcd-color-brand-hover: #40C9B0;
 	--rcd-color-brand-click: #0D967D;
@@ -10,6 +10,6 @@
 	--rcd-color-brand-light-disable: #F8FDFC;
 
 	--rcd-border-radius-8x: 12px;
-	/* 左侧菜单宽度 */
+	
 	--rcd-side-menu-width: 100px;
 }
