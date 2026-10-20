@@ -36,8 +36,8 @@ npm run lint
 ### 代码规范
 
 
-### 基于easy-cli生成的vue工程目录结构
-> 该模板是基于vue-cli4搭建的模板工程
+### easy-cli
+> vue-cli4
 ```
 ├── README.md
 ├── babel.config.js   // bebel配置
@@ -118,15 +118,15 @@ npm run lint
 └── vue.config.js     // webpack相关配置
 
 ```
-##### 1、publish -- 落地页说明
-> 结构如下，埋点等各种资源拆分成不同模块引入，放到public/layoutConfig目录下
+##### 1、publish -- 
+> public/layoutConfig
 ```html
 ├── public // 落地页配合，落地页不同模块拆分到layoutConfig目录下
 │   ├── index.html
 │   └── layoutConfig // 埋点等各种资源拆分成不同模块引入
 │       └── ja.html
 ```
-> index.html中以类似${ require('html-loader!./layoutConfig/watchtower.html') }的方式引入不同模块的html
+> index.html${ require('html-loader!./layoutConfig/watchtower.html') }html
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -146,9 +146,8 @@ ${ require('html-loader!./layoutConfig/ja.html') }
 </html>
 ```
 
-##### 2、constants -- 常量配置说明
-> 常量文件名采用驼峰名，如:eventsEnum.js
-> 代码中常量Key都才有大小，通过下划线连接，如：
+##### 2、constants -- 
+> ，如:eventsEnum.js
 ```javascript
 // 事件类型枚举
 export const EVENTS_ENUM = {
