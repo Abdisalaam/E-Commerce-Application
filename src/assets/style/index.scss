@@ -1,0 +1,63 @@
+@import './reset.scss';
+@import "./sassVariable.scss";
+@import "./icon.scss";
+
+/* 基础组件-主题色 */
+@import "~@Abdisalaam/b2c-main-ui-i18n/packages/theme/index.scss";
+
+html, body {
+  height: 100%;
+  background: var(--rcd-color-fill-100);
+  font-family: 'Arial,sans-serif';
+  textarea {
+    font-family: inherit;
+  }
+}
+.page-content {
+  padding: 24px;
+  background-color: var(--rcd-color-fill-white);
+  border-radius: var(--rcd-border-radius-8x);
+}
+
+.detail-page {
+  &.full-height {
+    height: 100%;
+    .detail-main {
+      height: 100%;
+    }
+  }
+  .detail-title {
+    color: var(--rcd-color-text-400);
+    font-weight: var(--rcd-font-weight-medium);
+    font-size: var(--rcd-font-size-20x);
+    line-height: var(--rcd-line-height-30);
+    margin-bottom: 16px;
+  }
+  .detail-main {
+    margin: 0;
+  }
+}
+
+.bottom-action-buttons {
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  box-shadow: var(--rcd-shadow-middle);
+  width: 100%;
+  background-color: var(--rcd-color-fill-white);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+  margin-top: 24px;
+}
+.el-table th {
+  vertical-align: top !important;
+  .el-checkbox__input {
+    vertical-align: top !important;
+  }
+}
+.el-table th>.cell {
+  vertical-align: top !important;
+}

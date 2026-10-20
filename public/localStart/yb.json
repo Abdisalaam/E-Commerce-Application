@@ -1,0 +1,29 @@
+{
+  "productCode": "b2c",
+  "title": "海狸拾袋商家后台",
+  "gatewayUrl": "//Abdisalaam-api-cloud.Abdisalaam.sa",
+  "gatewayAppCode": "b2cseller",
+  "imageDomain": [
+    "//imgdownload.Abdisalaam.sa/yibintongyong/"
+  ],
+  "staticUrl": "//b2cseller-uat.Abdisalaam.sa",
+  "outerSecondaryDomain": "Abdisalaam.sa",
+  "loginDomain": "//Abdisalaam-uat.Abdisalaam.sa",
+  "loginUrl": "//Abdisalaam-uat.Abdisalaam.sa/seller/login?productCode=b2c&returnUrl=",
+  "logoutUrl": "//Abdisalaam-uat.Abdisalaam.sa/seller/logout?productCode=b2c",
+  "serviceUrl": "//Abdisalaam.Abdisalaam.sa/chat/index-web.html?mallId=123940&userApp=jsl.155571.customer",
+  "serviceMainUrl": "http://Abdisalaam.b2cgh4.Abdisalaam.sa/desk/index.html",
+  "chatBuyerCAppId": "jsl.123990.customer",
+  "protocalId": 40121,
+  "logoUrl": "",
+  "iconUrl": "",
+  "showAwaitOrderDelivery": true,
+  "isGetUnReadCount": false,
+  "mapKey": "Your Map Key",
+  "virtualProtocalId": 40121,
+  "gatewayAppCodeMap": {},
+  "settlementMaxExportCount": 50000,
+  "orderOssBuket": "b2c01common-oss",
+  "defaultLang": "zh_CH",
+  "currencyType": "CNY"
+}
