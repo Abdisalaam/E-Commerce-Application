@@ -147,7 +147,7 @@ ${ require('html-loader!./layoutConfig/ja.html') }
 ```
 
 ##### 2、constants -- 
-> ，如:eventsEnum.js
+> ，eventsEnum.js
 ```javascript
 // 事件类型枚举
 export const EVENTS_ENUM = {
