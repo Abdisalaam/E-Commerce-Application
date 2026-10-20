@@ -121,9 +121,9 @@ npm run lint
 ##### 1、publish -- 
 > public/layoutConfig
 ```html
-├── public // 落地页配合，落地页不同模块拆分到layoutConfig目录下
+├── public // layoutConfig
 │   ├── index.html
-│   └── layoutConfig // 埋点等各种资源拆分成不同模块引入
+│   └── layoutConfig 
 │       └── ja.html
 ```
 > index.html${ require('html-loader!./layoutConfig/watchtower.html') }html
